@@ -1053,3 +1053,37 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
   Rendered movies/index.html.haml within layouts/application (36.5ms)
 Completed 200 OK in 359ms (Views: 348.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 165.91.12.92 at 2018-03-18 22:41:38 +0000
+
+
+Started GET "/movies" for 165.91.12.92 at 2018-03-18 22:41:39 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ruby606-yixiao.c9users.io/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 39ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 165.91.12.92 at 2018-03-18 22:41:39 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (40.8ms)
+Completed 200 OK in 1093ms (Views: 1083.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 165.91.12.92 at 2018-03-18 22:56:53 +0000
+
+
+Started GET "/movies" for 165.91.12.92 at 2018-03-18 22:56:54 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ruby606-yixiao.c9users.io/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 165.91.12.92 at 2018-03-18 22:56:54 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (1.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (41.5ms)
+Completed 200 OK in 939ms (Views: 853.4ms | ActiveRecord: 4.6ms)
